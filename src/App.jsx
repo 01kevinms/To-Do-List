@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { Container, Todolist, Input, Button, Listitem, Trash, Check, Divid } from "./style.js";
-import Logo from '../src/img/todolistimg.png'
 import Log from '../src/img/logoimg.png'
 function App() {
   const [list, setList] = useState([]);
