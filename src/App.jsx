@@ -47,14 +47,17 @@ settime(hour)
               list.map((item) => (
 
                 <Listitem $isfinished={item.finished} key={item.id}>
-                  <div>
-                    <div>
+               
+                    <div className='texts'>
+                      <div className='texts2'>
                   <Check onClick={() => finishTask(item.id)} />
                   <li>{item.task}</li>
+                      </div>
+
+                     <Trash className='DA' onClick={() => deletitem(item.id)} />
                     </div>
-                  <Trash onClick={() => deletitem(item.id)} />
-                  </div>
                   <div className='time'>
+                  <Trash className='DA2' onClick={() => deletitem(item.id)} />
                     <Divid><p>adicionado as: <span>{time}</span></p></Divid>
                   </div>
                 </Listitem>

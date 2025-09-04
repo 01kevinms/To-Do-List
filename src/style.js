@@ -7,7 +7,7 @@ img{
    z-index: -99;
    position: absolute;
    filter: blur(5px);
-     @media screen and (max-width: 800px) {
+     @media screen and (max-width: 900px) {
  width: 100%;
  height: 100%;
  position: relative;
@@ -19,7 +19,7 @@ img{
  display: flex;
  justify-content: center;
  align-items: center;
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 900px) {
 height: 100%;
 display: flex;
 align-items: center;
@@ -38,14 +38,18 @@ img{
     padding: 0;
     margin-top: 60px;
  }
- @media screen and (max-width: 800px) {
- width: 100%;
+ @media screen and (max-width: 900px) {
+ width: 80%;
  height: 100%;
 display: flex;
 flex-direction: column;
 justify-content: center;
+
 button{
    margin-top: 10px;
+}
+input{
+   width: auto;
 }
  }
  `
@@ -94,14 +98,40 @@ button{
  li{
     list-style: none;
  }
+ .texts{
+   display: flex;
+}
+.texts2{
+   gap: 10px;
+   display: flex;
+}
+.DA{
+   opacity: 0;
+}
+.time{
  
-  @media screen and (max-width: 800px){
+   height: 100%;
+   display: flex;
+   align-items: center;
+}
+  @media screen and (max-width: 900px){
 padding: 0;
    width: 100%;
 display: inline-block;
 height: auto;
 padding-top: 2.5%;
- box-shadow: 3px 5px 10px #000;
+box-shadow: 3px 5px 10px #000;
+.DA{
+   opacity: 1;
+}
+.DA2{
+   opacity: 0;
+}
+.texts{
+   display: flex;
+   justify-content: space-between;
+ 
+}
 div{
    display: flex;
    justify-content: space-between;
@@ -123,6 +153,7 @@ div{
  `
  export const Trash = styled(FcEmptyTrash)`
  cursor: pointer;
+ position: relative;
 &:hover{
    transform: scale(1.3);
 }
@@ -141,14 +172,15 @@ background: #9aff9aff;
  flex-direction: column;
  padding-left: 5px;
  margin-right: -15%;
-   @media screen and (max-width: 800px){
+   @media screen and (max-width: 900px){
    border-top: solid;
    border-left: none;
    width: 100%;
    height: 50px;
    margin-top: 5%;
    margin-right: 0;
-   
+   position: relative;
+   left: -10px;
    span{
       padding: 2px;
       border: solid 1px;
